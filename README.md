@@ -1,16 +1,24 @@
 # Documento de Gestión de Configuración
 
-##UTN FRC - CATEDRA: INGENIERIA Y CALIDAD DE SOFTWARE
+## Universidad Tecnológica Nacional - Facultad Regional Córdoba
+### Cátedra: Ingeniería y Calidad de Software
 
-## ECOHARMONY PARK - GRUPO 2
+## ECOHARMONY PARK
+
+###GRUPO 2
 
 ### Integrantes del Grupo
 
 | Nombre y Apellido          | Legajo     |
 | -------------------------- | ---------- |
-| Juan Ignacio Camargo Mano  | 85308      |
-| Consuelo Cordoba Oyhamburu | 85832      |
-
+| Juan Ignacio Camargo Mano | 85308      |
+| [Nombre 2]                | [Legajo 2] |
+| [Nombre 3]                | [Legajo 3] |
+| [Nombre 4]                | [Legajo 4] |
+| [Nombre 5]                | [Legajo 5] |
+| [Nombre 6]                | [Legajo 6] |
+| [Nombre 7]                | [Legajo 7] |
+| [Nombre 8]                | [Legajo 8] |
 
 ### Estructura del Repositorio
 
@@ -41,9 +49,9 @@ EHP_ISW_4K4_2025_G2/
 │── README.md
 ```
 
-### Listado de Items de Configuración
+### Listado de Ítems de Configuración
 
-| Nombre del Item       | Regla de Nombrado          | Ubicación Física           | Tipo de Item  |
+| Nombre del Ítem       | Regla de Nombrado          | Ubicación Física           | Tipo de Ítem  |
 | --------------------- | -------------------------- | -------------------------- | ------------- |
 | Base de Datos         | EHP\_BD                    | source/database            | Código        |
 | Backend               | EHP\_Back                  | source/back                | Código        |
@@ -91,4 +99,6 @@ EHP_ISW_4K4_2025_G2/
 ### Criterio de la Línea Base
 
 La línea base se establece por cada entrega de **TP\_evaluable** corregido de **EcoHarmony Park**.
+
+
 
