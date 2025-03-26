@@ -17,7 +17,6 @@
 | Gianella Bryanna Magliano        | 89302 |
 | Paloma Candelaria Corcoba        | 85250 |
 | Joaquin Miranda Oliveros         | 85530 |
-| [Nombre 10]       | [Legajo 10] |
 
 ### Estructura del Repositorio
 
@@ -33,8 +32,6 @@ EHP_ISW_4K4_2025_G2/
 │   │── DER/
 │   │── ManualUsuario/
 │   │── Prototipos/
-│   │── Publicidad/
-│   │── Tickets/
 │   │── UserStories/
 │   ├── .gitkeep
 │── source/
