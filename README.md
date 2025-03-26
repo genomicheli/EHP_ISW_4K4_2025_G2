@@ -97,7 +97,7 @@ EHP_ISW_4K4_2025_G2/
 
 ### Criterio de la Línea Base
 
-La línea base se establece por cada entrega de **Trabajo Práctico Evaluable** corregido de **EcoHarmony Park**. Este criterio está basado en que las entregas de los Trabajos Prácticos constituyen un marco de referencia sólido, estable y revisado del progreso de la materia.
+La línea base se establece por cada entrega de **Trabajo Práctico Evaluable** corregido de **EcoHarmony Park**. Nos basamos en este criterio ya que las entregas de los Trabajos Prácticos Evaluable de EcoHarmony Park constituyen un marco de referencia sólido, estable y revisado del progreso de la materia.
 
 
 
