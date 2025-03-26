@@ -9,9 +9,9 @@
 | Nombre y Apellido | Legajo     |
 | ----------------- | ---------- |
 | Juan Ignacio Camargo Mano        | 85308 |
-| Consuelo Cordoba Oyhamburu       | [85832 |
+| Consuelo Cordoba Oyhamburu       | 85832 |
 | Pedro Placci                     | 90522 |
-| [Nombre 4]        | [Legajo 4] |
+| Joaquin Miranda Oliveros         | 85530 |
 | [Nombre 5]        | [Legajo 5] |
 | [Nombre 6]        | [Legajo 6] |
 | [Nombre 7]        | [Legajo 7] |
