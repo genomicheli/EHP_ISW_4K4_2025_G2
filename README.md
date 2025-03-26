@@ -9,13 +9,13 @@
 | Nombre y Apellido | Legajo     |
 | ----------------- | ---------- |
 | Juan Ignacio Camargo Mano        | 85308 |
-| Consuelo Cordoba Oyhamburu       | [85832 |
+| Consuelo Cordoba Oyhamburu       | 85832 |
 | Pedro Placci                     | 90522 |
-| [Nombre 4]        | [Legajo 4] |
-| [Nombre 5]        | [Legajo 5] |
-| [Nombre 6]        | [Legajo 6] |
-| [Nombre 7]        | [Legajo 7] |
-| [Nombre 8]        | [Legajo 8] |
+| Genoves Micheli                  | 78493 |
+| Mateo Ugarte Torres              | 93050 |
+| Delfina Brenda Glavas            | 89335 |
+| Gianella Bryanna Magliano        | 89302 |
+| Paloma Candelaria Corcoba        | 85250 |
 | [Nombre 9]        | [Legajo 9] |
 | [Nombre 10]       | [Legajo 10] |
 
