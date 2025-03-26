@@ -1,24 +1,23 @@
 # Documento de Gestión de Configuración
 
 ## Universidad Tecnológica Nacional - Facultad Regional Córdoba
-### Cátedra: Ingeniería y Calidad de Software
 
-## ECOHARMONY PARK
-
-###GRUPO 2
+### Repositorio de Ingeniería y Calidad de Software para el grupo 2 en el proyecto de software ECOHARMONY PARK
 
 ### Integrantes del Grupo
 
-| Nombre y Apellido          | Legajo     |
-| -------------------------- | ---------- |
-| Juan Ignacio Camargo Mano | 85308      |
-| [Nombre 2]                | [Legajo 2] |
-| [Nombre 3]                | [Legajo 3] |
-| [Nombre 4]                | [Legajo 4] |
-| [Nombre 5]                | [Legajo 5] |
-| [Nombre 6]                | [Legajo 6] |
-| [Nombre 7]                | [Legajo 7] |
-| [Nombre 8]                | [Legajo 8] |
+| Nombre y Apellido | Legajo     |
+| ----------------- | ---------- |
+| Juan Ignacio Camargo Mano        | 85308 |
+| [Nombre 2]        | [Legajo 2] |
+| [Nombre 3]        | [Legajo 3] |
+| [Nombre 4]        | [Legajo 4] |
+| [Nombre 5]        | [Legajo 5] |
+| [Nombre 6]        | [Legajo 6] |
+| [Nombre 7]        | [Legajo 7] |
+| [Nombre 8]        | [Legajo 8] |
+| [Nombre 9]        | [Legajo 9] |
+| [Nombre 10]       | [Legajo 10] |
 
 ### Estructura del Repositorio
 
@@ -98,7 +97,9 @@ EHP_ISW_4K4_2025_G2/
 
 ### Criterio de la Línea Base
 
-La línea base se establece por cada entrega de **TP\_evaluable** corregido de **EcoHarmony Park**.
+La línea base se establece por cada entrega de **Trabajo Práctico Evaluable** corregido de **EcoHarmony Park**. Este criterio está basado en que las entregas de los Trabajos Prácticos constituyen un marco de referencia sólido, estable y revisado del progreso de la materia.
+
+
 
 
 
