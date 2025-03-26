@@ -10,7 +10,7 @@
 | ----------------- | ---------- |
 | Juan Ignacio Camargo Mano        | 85308 |
 | Consuelo Cordoba Oyhamburu       | [85832 |
-| [Nombre 3]        | [Legajo 3] |
+| Pedro Placci                     | 90522 |
 | [Nombre 4]        | [Legajo 4] |
 | [Nombre 5]        | [Legajo 5] |
 | [Nombre 6]        | [Legajo 6] |
