@@ -9,7 +9,7 @@
 | Nombre y Apellido | Legajo     |
 | ----------------- | ---------- |
 | Juan Ignacio Camargo Mano        | 85308 |
-| [Nombre 2]        | [Legajo 2] |
+| Consuelo Cordoba Oyhamburu       | [85832 |
 | [Nombre 3]        | [Legajo 3] |
 | [Nombre 4]        | [Legajo 4] |
 | [Nombre 5]        | [Legajo 5] |
