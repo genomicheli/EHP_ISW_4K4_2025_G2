@@ -16,7 +16,7 @@
 | Delfina Brenda Glavas            | 89335 |
 | Gianella Bryanna Magliano        | 89302 |
 | Paloma Candelaria Corcoba        | 85250 |
-| [Nombre 9]        | [Legajo 9] |
+| Joaquin Miranda Oliveros         | 85530 |
 | [Nombre 10]       | [Legajo 10] |
 
 ### Estructura del Repositorio
