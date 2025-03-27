@@ -2,7 +2,8 @@
 
 ## Universidad Tecnológica Nacional - Facultad Regional Córdoba
 
-### Repositorio de Ingeniería y Calidad de Software para el grupo 2 en el proyecto de software ECOHARMONY PARK
+### Repositorio del Proyecto de software ECOHARMONY PARK de la materia Ingeniería y Calidad de Software para el grupo 2.
+
 
 ### Integrantes del Grupo
 
