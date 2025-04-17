@@ -1,0 +1,116 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  background-color: #242424;
+  color: rgba(5, 5, 5, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #4f772d;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 100%;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #132a13;
+}
+
+.card {
+  background-color: #ecf39e;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px #132a13;
+  max-width: 400px;     /* ancho máximo */
+  margin: 2rem auto;    /* centrado horizontal y separación vertical */
+  text-align: center;   /* centra el contenido textualmente */
+}
+
+.cardTickets {
+  background-color: #90a955;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 8px #132a13;
+  max-width: 400px;     /* ancho máximo */
+  margin: 2rem auto;    /* centrado horizontal y separación vertical */
+  text-align: center;   /* centra el contenido textualmente */
+}
+
+.error-text {
+  color: #ff0303;       /* rojo similar a text-red-500 */
+  font-size: 0.875rem;   /* igual que text-sm */
+  margin-top: 0.25rem;   /* igual que mt-1 */
+}
+
+
