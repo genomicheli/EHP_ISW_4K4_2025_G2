@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import EmailModal from './EmailMessage';
+import QRCode from 'qrcode';
 
 export default function SuccessPage() {
   const { state } = useLocation();
@@ -12,29 +13,52 @@ export default function SuccessPage() {
   useEffect(() => {
     if (!state || emailSent.current || !state.tickets || state.tickets.length === 0) return;
 
-    const ticketIds = state.tickets.map(ticket => ticket.id).join(', ');
-    
-    emailjs.send(
-      'service_hkezf1o',
-      'template_4odi8er',
-      {
-        to_email: 'isw635289@gmail.com',
-        ticket_id: ticketIds,
-        date: state.date,
-        quantity: state.quantity,
-      },
-      'gdx2evaAxTK0Cc1_z'
-    ).then(
-      () => {
-        console.log('Correo enviado con éxito');
-        console.log('Tickets:', state.tickets);
-        emailSent.current = true;
-      },
-      err => console.error('Error enviando correo:', err)
-    );
+    // Generar QR codes para cada ticket
+    const generateQRs = async () => {
+      const qrPromises = state.tickets.map(ticket => 
+        QRCode.toDataURL(JSON.stringify({
+          id: ticket.id,
+          date: state.date,
+          age: ticket.age,
+          passType: ticket.passType
+        }))
+      );
+
+      const qrCodes = await Promise.all(qrPromises);
+      
+      // Crear el contenido HTML para el email con los QR codes
+      const qrHtml = qrCodes.map((qr, index) => `
+        <div style="margin-bottom: 20px;">
+          <p>Ticket ${index + 1}:</p>
+          <img src="${qr}" alt="QR Code" style="width: 200px; height: 200px;"/>
+        </div>
+      `).join('');
+
+      // Enviar email con los QR codes
+      emailjs.send(
+        'service_hkezf1o',
+        'template_4odi8er',
+        {
+          to_email: 'isw635289@gmail.com',
+          ticket_id: state.tickets.map(t => t.id).join(', '),
+          date: state.date,
+          quantity: state.quantity,
+          qr_codes: qrHtml
+        },
+        'gdx2evaAxTK0Cc1_z'
+      ).then(
+        () => {
+          console.log('Correo con QR codes enviado con éxito');
+          emailSent.current = true;
+        },
+        err => console.error('Error enviando correo:', err)
+      );
+    };
+
+    generateQRs().catch(console.error);
 
     return () => {
-      emailSent.current = true; // Aseguramos que no se envíe más de una vez
+      emailSent.current = true;
     };
   }, [state]);
 
@@ -47,22 +71,22 @@ export default function SuccessPage() {
           isOpen={modalOpen}
           onClose={() => setModalOpen(false)}
           emailContent={`
-            <p>Se enviaron los datos:</p>
+            <p>Se enviaron los datos y códigos QR al email:</p>
             <p><strong>Fecha:</strong> ${state.date}</p>
             <p><strong>Cantidad:</strong> ${state.quantity}</p>
-            <p><strong>IDs de tickets:</strong> ${state.tickets.map(ticket => ticket.id).join(', ')}</p>
           `}
         />
       )}
       <div className="form-container">
         <div className="card flex flex-col items-center">
-        <img
+          <img
             src="/ecoharmonyPark.png"
             style={{ height: '100px', marginBottom: '-2rem', objectFit: 'contain' }}
           />
           <h1 className="text-2xl font-bold mb-4">¡Compra exitosa!</h1>
           <p>Fecha: <strong>{state.date}</strong></p>
           <p>Entradas: <strong>{state.quantity}</strong></p>
+          <p className="mt-4">Los códigos QR de sus entradas han sido enviados por email.</p>
 
           <div className="flex gap-4 w-full mt-6">
             <button
