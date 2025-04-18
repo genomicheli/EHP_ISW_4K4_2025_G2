@@ -92,15 +92,33 @@ export default function PurchasePage() {
     localStorage.setItem('tickets', JSON.stringify([...prevTickets, ...ticketWithDate]));
   
     if (paymentMethod === 'tarjeta') {
-      setTimeout(() => {
-        window.location.href = 'https://www.mercadopago.com.ar';
+      // Guardamos los datos del ticket en localStorage
+      localStorage.setItem('pendingTransaction', JSON.stringify({
+        tickets: ticketWithDate,
+        date,
+        quantity,
+        paymentMethod: 'tarjeta'
+      }));
+
+      // Abrimos MP en una nueva ventana
+      const mpWindow = window.open('https://www.mercadopago.com.ar', '_blank');
+      
+      // Verificamos cuando el usuario cierra la ventana
+      const checkWindow = setInterval(() => {
+        if (mpWindow?.closed) {
+          clearInterval(checkWindow);
+          const pendingData = JSON.parse(localStorage.getItem('pendingTransaction') || '{}');
+          localStorage.removeItem('pendingTransaction');
+          navigate('/success', { state: pendingData });
+        }
       }, 500);
     } else {
       navigate('/success', { 
         state: {
           tickets: ticketWithDate,
-          date,
-          quantity
+          date: date,
+          quantity: quantity,
+          paymentMethod: paymentMethod
         } 
       });
     }
