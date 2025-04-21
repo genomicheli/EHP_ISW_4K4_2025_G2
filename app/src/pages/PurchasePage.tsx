@@ -1,5 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { calculateTicketPrice } from '../utils/pricing';
+import StyledButton from '../components/StyledButton';
+
+type Ticket = {
+  age: string;
+  passType: string;
+  isRetired: boolean;
+}
 
 export default function PurchasePage() {
   const navigate = useNavigate();
@@ -8,12 +16,12 @@ export default function PurchasePage() {
   const [paymentMethod, setPaymentMethod] = useState('');
   const [dateError, setDateError] = useState<string | null>(null);
   const [ageErrors, setAgeErrors] = useState<string[]>(['']);
-  const [tickets, setTickets] = useState([{ age: '', passType: 'REGULAR' }]);
+  const [tickets, setTickets] = useState<Ticket[]>([{ age: '', passType: 'REGULAR', isRetired: false }]);
   
   const handleQuantityChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const qty = parseInt(e.target.value);
     setQuantity(qty);
-    setTickets(Array.from({ length: qty }, () => ({ age: '', passType: 'REGULAR' })));
+    setTickets(Array.from({ length: qty }, () => ({ age: '', passType: 'REGULAR', isRetired: false })));
     setAgeErrors(Array(qty).fill(''));
   };
   
@@ -41,7 +49,12 @@ export default function PurchasePage() {
     newTickets[index].passType = value;
     setTickets(newTickets);
   };
-  
+
+  const handleRetiredChange = (index: number, checked: boolean) => {
+    const newTickets = [...tickets];
+    newTickets[index].isRetired = checked;
+    setTickets(newTickets);
+  };
 
   const isTuesdayOrThursday = (dateStr: string) => {
     const d = new Date(dateStr);
@@ -124,6 +137,10 @@ export default function PurchasePage() {
     }
   };  
 
+  const calculateTotal = () => {
+    return tickets.reduce((sum, ticket) => sum + calculateTicketPrice(ticket), 0);
+  };
+
   return (
     <div className="form-container">
       <div className="card">
@@ -164,33 +181,54 @@ export default function PurchasePage() {
           </div>
 
           {tickets.map((ticket, i) => (
-          <div className="cardTickets" key={i}>
-            <div className="mb-6 w-full max-w-sm border p-4 rounded bg-gray-50">
-              <h3 className="text-lg font-semibold mb-2">Entrada {i + 1}:</h3>
+            <div className="cardTickets" key={i}>
+              <div className="mb-6 w-full max-w-sm border p-4 rounded bg-gray-50">
+                <h3 className="text-lg font-semibold mb-2">Entrada {i + 1}:</h3>
 
-              <label className="block mb-1">Edad:</label>
-              <input
-                type="number"
-                className="w-full p-2 border rounded mb-2"
-                value={ticket.age}
-                min={0}
-                onChange={(e) => handleAgeChange(i, e.target.value)}
-              />
-              {ageErrors[i] && <p className="error-text">{ageErrors[i]}</p>}
+                <label className="block mb-1">Edad:</label>
+                <input
+                  type="number"
+                  className="w-full p-2 border rounded mb-2"
+                  value={ticket.age}
+                  min={0}
+                  onChange={(e) => handleAgeChange(i, e.target.value)}
+                />
+                {ageErrors[i] && <p className="error-text">{ageErrors[i]}</p>}
 
-              <label className="block mb-1">Tipo:</label>
-              <select
-                className="w-full p-2 border rounded"
-                value={ticket.passType}
-                onChange={(e) => handlePassTypeChange(i, e.target.value)}
-              >
-                <option value="REGULAR">REGULAR</option>
-                <option value="VIP">VIP</option>
-              </select>
+                <div className="mb-2">
+                  <label className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      checked={ticket.isRetired}
+                      onChange={(e) => handleRetiredChange(i, e.target.checked)}
+                      className="form-checkbox h-4 w-4"
+                    />
+                    <span>Jubilado</span>
+                  </label>
+                </div>
+
+                <label className="block mb-1">Tipo:</label>
+                <select
+                  className="w-full p-2 border rounded"
+                  value={ticket.passType}
+                  onChange={(e) => handlePassTypeChange(i, e.target.value)}
+                >
+                  <option value="REGULAR">REGULAR</option>
+                  <option value="VIP">VIP</option>
+                </select>
+
+                <div className="mt-2 text-right font-semibold">
+                  Precio: ${calculateTicketPrice(ticket).toLocaleString()}
+                </div>
+              </div>
             </div>
-          </div>
           ))}
 
+          <div className="w-full max-w-sm border-t pt-4 mt-4">
+            <div className="text-xl font-bold text-right">
+              Total: ${calculateTotal().toLocaleString()}
+            </div>
+          </div>
 
           <div className="mb-4 w-full max-w-sm">
             <label className="block mb-2">Método de Pago:</label>
@@ -206,12 +244,11 @@ export default function PurchasePage() {
           </div>
 
           <div className="flex flex-col gap-4 w-full max-w-sm">
-            <button
+            <StyledButton
+              text="Comprar"
+              tooltip={`Total: $${calculateTotal().toLocaleString()}`}
               onClick={handleSubmit}
-              className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-            >
-              Comprar
-            </button>
+            />
             <button
               onClick={() => navigate('/welcome')}
               className="bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
