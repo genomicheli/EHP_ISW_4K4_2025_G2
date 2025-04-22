@@ -28,9 +28,12 @@ export default function PurchasePage() {
   const handleAgeChange = (index: number, value: string) => {
     const newTickets = [...tickets];
     newTickets[index].age = value;
-    setTickets(newTickets);
   
     const num = Number(value);
+    newTickets[index].isRetired = !isNaN(num) && num >= 65;
+  
+    setTickets(newTickets);
+  
     const updatedErrors = [...ageErrors];
     if (isNaN(num)) {
       updatedErrors[index] = 'Debe ingresar un número';
@@ -42,17 +45,11 @@ export default function PurchasePage() {
       updatedErrors[index] = '';
     }
     setAgeErrors(updatedErrors);
-  };
+  };  
   
   const handlePassTypeChange = (index: number, value: string) => {
     const newTickets = [...tickets];
     newTickets[index].passType = value;
-    setTickets(newTickets);
-  };
-
-  const handleRetiredChange = (index: number, checked: boolean) => {
-    const newTickets = [...tickets];
-    newTickets[index].isRetired = checked;
     setTickets(newTickets);
   };
 
@@ -195,17 +192,7 @@ export default function PurchasePage() {
                 />
                 {ageErrors[i] && <p className="error-text">{ageErrors[i]}</p>}
 
-                <div className="mb-2">
-                  <label className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={ticket.isRetired}
-                      onChange={(e) => handleRetiredChange(i, e.target.checked)}
-                      className="form-checkbox h-4 w-4"
-                    />
-                    <span>Jubilado</span>
-                  </label>
-                </div>
+                {Number(ticket.age) >= 65}
 
                 <label className="block mb-1">Tipo:</label>
                 <select
