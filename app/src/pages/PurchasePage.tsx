@@ -111,17 +111,11 @@ export default function PurchasePage() {
       }));
 
       // Abrimos MP en una nueva ventana
-      const mpWindow = window.open('https://www.mercadopago.com.ar', '_blank');
+      window.open('https://www.mercadopago.com.ar', '_blank');
       
-      // Verificamos cuando el usuario cierra la ventana
-      const checkWindow = setInterval(() => {
-        if (mpWindow?.closed) {
-          clearInterval(checkWindow);
-          const pendingData = JSON.parse(localStorage.getItem('pendingTransaction') || '{}');
-          localStorage.removeItem('pendingTransaction');
-          navigate('/success', { state: pendingData });
-        }
-      }, 500);
+      const pendingData = JSON.parse(localStorage.getItem('pendingTransaction') || '{}');
+      localStorage.removeItem('pendingTransaction');
+      navigate('/success', { state: pendingData });
     } else {
       navigate('/success', { 
         state: {

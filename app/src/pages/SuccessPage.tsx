@@ -121,18 +121,16 @@ export default function SuccessPage() {
           <div className="mt-4 w-full">
             {state.tickets.map((ticket: Ticket, index: number) => (
               <p key={index} className="text-sm">
-                Entrada {index + 1}: ${calculateTicketPrice(ticket).toLocaleString()}
+                Entrada {index + 1}: <strong>${calculateTicketPrice(ticket).toLocaleString()}</strong>
               </p>
             ))}
             <p className="font-bold mt-2">
-              Total: ${state.tickets.reduce((sum: number, ticket: Ticket) => 
+              Total: <strong>${state.tickets.reduce((sum: number, ticket: Ticket) => 
                 sum + calculateTicketPrice(ticket), 0
-              ).toLocaleString()}
+              ).toLocaleString()}</strong>
             </p>
           </div>
           
-          <p className="mt-4">Los códigos QR de sus entradas han sido enviados por email.</p>
-
           <div className="flex gap-4 w-full mt-6">
             <button
               onClick={() => navigate('/welcome')}
