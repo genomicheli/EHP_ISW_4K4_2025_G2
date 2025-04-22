@@ -75,6 +75,11 @@ export default function PurchasePage() {
       alert('Por favor, selecciona una fecha de visita.');
       return;
     }
+
+    if (paymentMethod === 'seleccion' || paymentMethod === '') {
+      alert('Por favor, selecciona un método de pago.');
+      return;
+    }
   
     for (let i = 0; i < tickets.length; i++) {
       if (!tickets[i].age) {
@@ -218,6 +223,7 @@ export default function PurchasePage() {
               value={paymentMethod}
               onChange={(e) => setPaymentMethod(e.target.value)}
             >
+                            <option value="seleccion">Seleccionar</option>
               <option value="tarjeta">Tarjeta de Crédito</option>
               <option value="efectivo">Efectivo</option>
             </select>
