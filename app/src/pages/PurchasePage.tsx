@@ -218,7 +218,6 @@ export default function PurchasePage() {
               value={paymentMethod}
               onChange={(e) => setPaymentMethod(e.target.value)}
             >
-              <option value="">Seleccionar...</option>
               <option value="tarjeta">Tarjeta de Crédito</option>
               <option value="efectivo">Efectivo</option>
             </select>
