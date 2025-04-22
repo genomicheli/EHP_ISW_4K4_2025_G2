@@ -5,6 +5,13 @@ import EmailModal from './EmailMessage';
 import QRCode from 'qrcode';
 import { calculateTicketPrice } from '../utils/pricing';
 
+interface Ticket {
+  id: string;
+  age: number;
+  passType: string;
+  isRetired: boolean;
+}
+
 export default function SuccessPage() {
   const { state } = useLocation();
   const navigate = useNavigate();
@@ -16,7 +23,7 @@ export default function SuccessPage() {
 
     // Generar QR codes para cada ticket
     const generateQRs = async () => {
-      const qrPromises = state.tickets.map(ticket => 
+      const qrPromises = state.tickets.map((ticket: Ticket) => 
         QRCode.toDataURL(JSON.stringify({
           id: ticket.id,
           date: state.date,
@@ -64,7 +71,7 @@ export default function SuccessPage() {
         'template_4odi8er',
         {
           to_email: 'isw635289@gmail.com',
-          ticket_id: state.tickets.map(t => t.id).join(', '),
+          ticket_id: state.tickets.map((ticket: Ticket) => ticket.id).join(', '),
           date: state.date,
           quantity: state.quantity,
           qr_codes: emailTemplate
@@ -112,13 +119,13 @@ export default function SuccessPage() {
           <p>Entradas: <strong>{state.quantity}</strong></p>
           
           <div className="mt-4 w-full">
-            {state.tickets.map((ticket, index) => (
+            {state.tickets.map((ticket: Ticket, index: number) => (
               <p key={index} className="text-sm">
                 Entrada {index + 1}: ${calculateTicketPrice(ticket).toLocaleString()}
               </p>
             ))}
             <p className="font-bold mt-2">
-              Total: ${state.tickets.reduce((sum, ticket) => 
+              Total: ${state.tickets.reduce((sum: number, ticket: Ticket) => 
                 sum + calculateTicketPrice(ticket), 0
               ).toLocaleString()}
             </p>
