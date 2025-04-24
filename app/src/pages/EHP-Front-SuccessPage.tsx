@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
-import EmailModal from './EmailMessage';
+import EmailModal from './EHP-Front-EmailMessage';
 import QRCode from 'qrcode';
-import { calculateTicketPrice } from '../utils/pricing';
+import { calculateTicketPrice } from '../utils/EHP-Back-pricing';
 
 interface Ticket {
   id: string;

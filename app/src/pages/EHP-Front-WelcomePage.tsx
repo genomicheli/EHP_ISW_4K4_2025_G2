@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext.tsx';
+import { useAuth } from '../context/EHP-Back-AuthContext.tsx';
 
 export default function WelcomePage() {
   const navigate = useNavigate();

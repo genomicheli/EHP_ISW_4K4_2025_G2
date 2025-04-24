@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { calculateTicketPrice } from '../utils/pricing';
-import StyledButton from '../components/StyledButton';
+import { calculateTicketPrice } from '../utils/EHP-Back-pricing';
+import StyledButton from '../components/EHP-Front-StyledButton';
 
 type Ticket = {
   age: string;
