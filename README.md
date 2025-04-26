@@ -1,3 +1,4 @@
+
 # 📚 Tabla de Contenidos
 
 - [📄 Gestión de Configuración](#-gestión-de-configuración)
@@ -38,11 +39,38 @@ Materia: **Ingeniería y Calidad de Software** - Grupo 2
 
 ## 📁 Estructura Actual del Repositorio
 
-EHP_ISW_4K4_2025_G2/ │── app/ │ │── public/ │ │ │── ecoharmonyPark.jpg │ │ │── ecoharmonyPark.png │ │ │── vite.svg │ │── src/ │ │── assets/ │ │ │── react.svg │ │── components/ │ │ │── StyledButton.tsx │ │── context/ │ │ │── AuthContext.tsx │ │── pages/ │ │ │── EmailMessage.tsx │ │ │── LoginPage.tsx │ │ │── PurchasePage.tsx │ │ │── SuccessPage.tsx │ │ │── WelcomePage.tsx │ │── utils/ │ │ │── pricing.ts │ │── App.css │ │── App.tsx │ │── index.css │ │── main.tsx │ │── vite-env.d.ts │── config/ │── docs/ │── tests/ │── README.md
-
-yaml
-Copiar
-Editar
+```
+EHP_ISW_4K4_2025_G2/
+│── app/
+│   │── public/
+│   │   │── ecoharmonyPark.jpg
+│   │   │── ecoharmonyPark.png
+│   │   │── vite.svg
+│   │── src/
+│       │── assets/
+│       │   │── react.svg
+│       │── components/
+│       │   │── StyledButton.tsx
+│       │── context/
+│       │   │── AuthContext.tsx
+│       │── pages/
+│       │   │── EmailMessage.tsx
+│       │   │── LoginPage.tsx
+│       │   │── PurchasePage.tsx
+│       │   │── SuccessPage.tsx
+│       │   │── WelcomePage.tsx
+│       │── utils/
+│       │   │── pricing.ts
+│       │── App.css
+│       │── App.tsx
+│       │── index.css
+│       │── main.tsx
+│       │── vite-env.d.ts
+│── config/
+│── docs/
+│── tests/
+│── README.md
+```
 
 ---
 
@@ -101,18 +129,9 @@ Cada entrega revisada representa un punto de referencia estable, permitiendo:
 
 Cada Línea Base será etiquetada en el repositorio utilizando el siguiente formato:
 
+```
 LB-[Número]-[Descripción]-[Fecha]
-
-yaml
-Copiar
-Editar
-
-**Ejemplos:**
-
-- `LB-1-EntregaInicial-2025-05-10`
-- `LB-2-EntregaFinal-2025-06-20`
-
----
+```
 
 
 
