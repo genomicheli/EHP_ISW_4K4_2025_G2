@@ -29,13 +29,13 @@ Materia: **Ingeniería y Calidad de Software** - Grupo 2
 ```
 EHP_ISW_4K4_2025_G2/
 |-- app/
-|   |-- node_modules/
 |   |-- public/
 |   |   |-- EHP_IMG_ecoharmonyPark.jpg
 |   |   |-- EHP_IMG_ecoharmonyPark.png
 |   |   |-- EHP_PUB_vite.svg
 |   |-- src/
 |       |-- assets/
+|       |   |-- EHP_ASSETS_react.svg
 |       |-- components/
 |       |   |-- EHP_COMP_StyledButton.tsx
 |       |-- context/
