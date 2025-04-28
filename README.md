@@ -59,6 +59,8 @@ EHP_ISW_4K4_2025_G2/
 |       |-- EHP_CFG_tsconfig.json
 |       |-- EHP_CFG_tsconfig.node.json
 |-- docs/
+|   |-- userStories/
+|   |   |-- EHP_DOC_US-8.pdf
 |-- README.md
 ```
 
