@@ -58,9 +58,7 @@ EHP_ISW_4K4_2025_G2/
 |       |-- EHP_CFG_tsconfig.app.json
 |       |-- EHP_CFG_tsconfig.json
 |       |-- EHP_CFG_tsconfig.node.json
-|-- config/
 |-- docs/
-|-- tests/
 |-- README.md
 ```
 
@@ -75,9 +73,7 @@ EHP_ISW_4K4_2025_G2/
 | Contexto de Estado Global      | EHP_CTX_[Nom]             | app/src/context/            | Código        |
 | Páginas de Navegación          | EHP_PAGE_[Nom]            | app/src/pages/              | Código        |
 | Funciones Utilitarias          | EHP_UTIL_[Nom]            | app/src/utils/              | Código        |
-| Configuración del Proyecto     | EHP_CFG_[Nom]             | config/, archivos config    | Configuración |
 | Archivos Estáticos Públicos    | EHP_PUB_[Nom]             | app/public/                 | Asset         |
-| Pruebas Unitarias y Funcionales| EHP_TEST_[Nom]            | tests/                      | Test          |
 | Documentación General          | EHP_DOC_[Nom]             | docs/                       | Documentación |
 | Hoja de Estilos Principal      | EHP_CSS_[Nom]             | app/src/App.css, index.css   | Código        |
 | Archivos de Inicio/Principal   | EHP_BOOT_[Nom]            | app/src/main.tsx, App.tsx, index.html | Código |
