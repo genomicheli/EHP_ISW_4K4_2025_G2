@@ -61,6 +61,10 @@ EHP_ISW_4K4_2025_G2/
 |-- docs/
 |   |-- userStories/
 |   |   |-- EHP_DOC_US-8.pdf
+|   |-- prototipos/
+|   |-- manualUsuario/
+|   |-- casosPrueba/
+|   |-- DER/
 |-- README.md
 ```
 
