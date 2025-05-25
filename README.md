@@ -65,6 +65,8 @@ EHP_ISW_4K4_2025_G2/
 |   |-- manualUsuario/
 |   |-- casosPrueba/
 |   |-- DER/
+|   |-- implementacionScrum/
+|   |   |--EHP_DOC_SCRUM.pdf
 |-- README.md
 ```
 
