@@ -64,6 +64,7 @@ EHP_ISW_4K4_2025_G2/
 |   |-- prototipos/
 |   |-- manualUsuario/
 |   |-- casosPrueba/
+|   |   |--EHP_TEST_US_InscribirActividad.xlsx
 |   |-- DER/
 |   |-- implementacionScrum/
 |   |   |--EHP_DOC_SCRUM.pdf
@@ -88,6 +89,7 @@ EHP_ISW_4K4_2025_G2/
 | Archivos de Ambiente           | EHP_ENV_[Nom]             | app/src/vite-env.d.ts        | Configuración |
 | Imágenes Públicas              | EHP_IMG_[Nom]             | app/public/                  | Asset         |
 | Logos/Assets del Proyecto      | EHP_ASSET_[Nom]           | app/src/assets/              | Asset         |
+| Casos de Prueba                | EHP_TEST_[Nom]            | docs/casosPrueba/            | Documentación |
 
 ---
 
