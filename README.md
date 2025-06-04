@@ -65,7 +65,8 @@ EHP_ISW_4K4_2025_G2/
 |   |-- manualUsuario/
 |   |-- casosPrueba/
 |   |   |--EHP_TEST_US_InscribirActividad.xlsx
-|   |   |--EHP_Test_US_ComprarEntradaGrupo11.xlsx
+|   |   |--EHP_TEST_US_ComprarEntradaGrupo11.xlsx
+|   |   |--EHP_TEST_US_ComprarEntradaGrupo1.xlsx
 |   |-- DER/
 |   |-- implementacionScrum/
 |   |   |--EHP_DOC_SCRUM.pdf
