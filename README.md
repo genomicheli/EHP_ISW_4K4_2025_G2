@@ -70,6 +70,8 @@ EHP_ISW_4K4_2025_G2/
 |   |-- DER/
 |   |-- implementacionScrum/
 |   |   |--EHP_DOC_SCRUM.pdf
+|   |-- retrospectiveScrum/
+|   |   |--EHP_DOC_RETROSPECTIVE.jpg
 |-- README.md
 ```
 
