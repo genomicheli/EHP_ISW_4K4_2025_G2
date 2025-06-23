@@ -61,13 +61,10 @@ EHP_ISW_4K4_2025_G2/
 |-- docs/
 |   |-- userStories/
 |   |   |-- EHP_DOC_US-8.pdf
-|   |-- prototipos/
-|   |-- manualUsuario/
 |   |-- casosPrueba/
 |   |   |--EHP_TEST_US_InscribirActividad.xlsx
 |   |   |--EHP_TEST_US_ComprarEntradaGrupo11.xlsx
 |   |   |--EHP_TEST_US_ComprarEntradaGrupo1.xlsx
-|   |-- DER/
 |   |-- implementacionScrum/
 |   |   |--EHP_DOC_SCRUM.pdf
 |   |-- retrospectiveScrum/
@@ -79,43 +76,53 @@ EHP_ISW_4K4_2025_G2/
 
 ## 🗂️ Listado de Ítems de Configuración
 
-| Nombre del Ítem               | Regla de Nombrado         | Ubicación Física           | Tipo de Ítem  |
-| ------------------------------ | ------------------------- | --------------------------- | ------------- |
-| Aplicación Web (Frontend)      | EHP_APP_[Nom]             | app/src/                    | Código        |
-| Componentes Reutilizables      | EHP_COMP_[Nom]            | app/src/components/         | Código        |
-| Contexto de Estado Global      | EHP_CTX_[Nom]             | app/src/context/            | Código        |
-| Páginas de Navegación          | EHP_PAGE_[Nom]            | app/src/pages/              | Código        |
-| Funciones Utilitarias          | EHP_UTIL_[Nom]            | app/src/utils/              | Código        |
-| Archivos Estáticos Públicos    | EHP_PUB_[Nom]             | app/public/                 | Asset         |
-| Documentación General          | EHP_DOC_[Nom]             | docs/                       | Documentación |
-| Hoja de Estilos Principal      | EHP_CSS_[Nom]             | app/src/App.css, index.css   | Código        |
-| Archivos de Inicio/Principal   | EHP_BOOT_[Nom]            | app/src/main.tsx, App.tsx, index.html | Código |
-| Archivos de Ambiente           | EHP_ENV_[Nom]             | app/src/vite-env.d.ts        | Configuración |
-| Imágenes Públicas              | EHP_IMG_[Nom]             | app/public/                  | Asset         |
-| Logos/Assets del Proyecto      | EHP_ASSET_[Nom]           | app/src/assets/              | Asset         |
-| Casos de Prueba                | EHP_TEST_[Nom]            | docs/casosPrueba/            | Documentación |
+| **Nombre del Ítem**          | **Regla de Nombrado**   | **Ubicación Física**                        | **Tipo de Ítem** |
+| ---------------------------- | ----------------------- | ------------------------------------------- | ---------------- |
+| Aplicación Web (Frontend)    | EHP\_APP\_\[Nom]        | `app/src/`                                  | Código           |
+| Componentes Reutilizables    | EHP\_COMP\_\[Nom]       | `app/src/components/`                       | Código           |
+| Contexto de Estado Global    | EHP\_CTX\_\[Nom]        | `app/src/context/`                          | Código           |
+| Páginas del Sistema          | EHP\_PAGE\_\[Nom]       | `app/src/pages/`                            | Código           |
+| Funciones Utilitarias        | EHP\_UTIL\_\[Nom]       | `app/src/utils/`                            | Código           |
+| Archivos de Arranque         | EHP\_BOOT\_\[Nom]       | `app/src/App.tsx`, `main.tsx`, `index.html` | Código           |
+| Hojas de Estilo              | EHP\_CSS\_\[Nom]        | `app/src/*.css`                             | Código           |
+| Archivos de Configuración    | EHP\_CFG\_\[Nom]        | `app/src/*.config.*`, `tsconfig*.json`      | Configuración    |
+| Archivos de Ambiente         | EHP\_ENV\_\[Nom]        | `app/src/vite-env.d.ts`                     | Configuración    |
+| Imágenes Públicas            | EHP\_IMG\_\[Nom]        | `app/public/`                               | Asset            |
+| Logos y Assets del Sistema   | EHP\_ASSETS\_\[Nom]     | `app/src/assets/`                           | Asset            |
+| Recursos Estáticos Públicos  | EHP\_PUB\_\[Nom]        | `app/public/`                               | Asset            |
+| Documentos de Usuario        | EHP\_DOC\_US-\[ID]      | `docs/userStories/`                         | Documentación    |
+| Casos de Prueba              | EHP\_TEST\_US\_\[Nom]   | `docs/casosPrueba/`                         | Documentación    |
+| Documentos del Proceso Scrum | EHP\_DOC\_SCRUM         | `docs/implementacionScrum/`                 | Documentación    |
+| Retrospectivas Scrum         | EHP\_DOC\_RETROSPECTIVE | `docs/retrospectiveScrum/`                  | Documentación    |
+| Manual/Resumen del Proyecto  | README.md               | `README.md`                                 | Documentación    |
+
 
 ---
 
 ## 📖 Glosario
 
-| Sigla | Significado               |
-| ----- | ------------------------- |
-| EHP   | EcoHarmony Park           |
-| APP   | Aplicación Principal       |
-| COMP  | Componente                 |
-| CTX   | Contexto                   |
-| PAGE  | Página de Navegación       |
-| UTIL  | Funciones Utilitarias       |
-| CFG   | Configuración              |
-| PUB   | Público (Assets Estáticos) |
-| TEST  | Prueba                     |
-| DOC   | Documentación              |
-| CSS   | Hoja de Estilos             |
-| BOOT  | Archivos de Inicio         |
-| ENV   | Ambiente                   |
-| IMG   | Imagen                     |
-| ASSET | Recurso Estático            |
+| **Sigla / Prefijo**    | **Significado**                                             |
+| ---------------------- | ----------------------------------------------------------- |
+| **EHP**                | EcoHarmony Park (nombre del sistema/proyecto)               |
+| **APP**                | Aplicación principal (estructura general del frontend)      |
+| **COMP**               | Componente reutilizable (UI / funcionalidad encapsulada)    |
+| **CTX**                | Contexto (manejo de estado global con React Context API)    |
+| **PAGE**               | Página del sistema (pantallas de usuario final)             |
+| **UTIL**               | Función utilitaria (funciones de soporte o auxiliares)      |
+| **BOOT**               | Archivo de arranque del sistema (entry points)              |
+| **CSS**                | Hoja de estilos en cascada (estilos personalizados)         |
+| **CFG**                | Archivo de configuración del entorno o herramientas         |
+| **ENV**                | Definición de tipos o variables de entorno                  |
+| **IMG**                | Imagen pública utilizada por la app                         |
+| **ASSETS**             | Recurso estático del sistema (logos, íconos, ilustraciones) |
+| **PUB**                | Archivo estático público (incluidos SVGs y HTMLs generales) |
+| **DOC**                | Documentación general del proyecto                          |
+| **DOC\_US**            | Documento de historia de usuario                            |
+| **DOC\_SCRUM**         | Documentación del proceso Scrum                             |
+| **DOC\_RETROSPECTIVE** | Registro de retrospectivas de Scrum                         |
+| **TEST**               | Caso de prueba funcional                                    |
+| **README**             | Documento raíz con resumen general del repositorio          |
+
 
 ---
 
