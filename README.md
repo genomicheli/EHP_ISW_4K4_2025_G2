@@ -69,6 +69,8 @@ EHP_ISW_4K4_2025_G2/
 |   |   |--EHP_DOC_SCRUM.pdf
 |   |-- retrospectiveScrum/
 |   |   |--EHP_DOC_RETROSPECTIVE.jpg
+|   |-- tdd/
+|   |   |--EHP_DOC_TDD.pdf
 |-- README.md
 ```
 
@@ -94,6 +96,7 @@ EHP_ISW_4K4_2025_G2/
 | Casos de Prueba              | EHP\_TEST\_US\_\[Nom]   | `docs/casosPrueba/`                         | Documentación    |
 | Documentos del Proceso Scrum | EHP\_DOC\_SCRUM         | `docs/implementacionScrum/`                 | Documentación    |
 | Retrospectivas Scrum         | EHP\_DOC\_RETROSPECTIVE | `docs/retrospectiveScrum/`                  | Documentación    |
+| Test-Driven Development      | EHP\_DOC\_TDD           | `docs/tdd/`                                 | Documentación    |
 | Manual/Resumen del Proyecto  | README.md               | `README.md`                                 | Documentación    |
 
 
@@ -121,6 +124,7 @@ EHP_ISW_4K4_2025_G2/
 | **DOC\_SCRUM**         | Documentación del proceso Scrum                             |
 | **DOC\_RETROSPECTIVE** | Registro de retrospectivas de Scrum                         |
 | **TEST**               | Caso de prueba funcional                                    |
+| **TDD**                | Test-Driven Development                                     |
 | **README**             | Documento raíz con resumen general del repositorio          |
 
 
